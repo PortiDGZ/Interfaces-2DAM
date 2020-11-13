@@ -21,7 +21,8 @@ namespace insertalumno
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            // TODO: esta línea de código carga datos en la tabla 'interfacesDataSet1.alumnos' Puede moverla o quitarla según sea necesario.
+            this.alumnosTableAdapter.Fill(this.interfacesDataSet1.alumnos);
         }
 
         private void button1_Click(object sender, EventArgs e)
