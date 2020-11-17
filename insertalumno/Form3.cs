@@ -61,5 +61,26 @@ namespace insertalumno
             comboBox1.DataSource = dt;
             conexion.Close();
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = "Server=127.0.0.1;Database=interfaces; Uid=root;Pwd=root;";
+            conexion.Open();
+
+            string st = "SELECT * FROM municipios WHERE " + comboBox1.Text;
+
+
+
+            MySqlCommand comando = new MySqlCommand(st, conexion);
+            comando.ExecuteNonQuery();
+            MySqlDataAdapter da1 = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da1.Fill(dt);
+            comboBox1.ValueMember = "id";
+            comboBox1.DisplayMember = "provincia";
+            comboBox1.DataSource = dt;
+            conexion.Close();
+        }
     }
 }
