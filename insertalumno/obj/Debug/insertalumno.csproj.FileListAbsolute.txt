@@ -24,3 +24,5 @@ C:\Users\USUARIO\source\repos\insertalumno\bin\Debug\MySql.Data.xml
 C:\Users\USUARIO\source\repos\insertalumno\obj\Debug\insertalumno.exe.config
 C:\Users\USUARIO\source\repos\insertalumno\obj\Debug\insertalumno.Form2.resources
 C:\Users\USUARIO\source\repos\insertalumno\obj\Debug\insertalumno.csproj.CopyComplete
+C:\Users\USUARIO\source\repos\insertalumno\obj\Debug\insertalumno.CalendarPopUp.resources
+C:\Users\USUARIO\source\repos\insertalumno\obj\Debug\insertalumno.Form3.resources

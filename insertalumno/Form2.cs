@@ -27,23 +27,20 @@ namespace insertalumno
 
         private void button1_Click(object sender, EventArgs e)
         {
+            insertalumno.Form3 form3 = new insertalumno.Form3();
 
-            MySqlConnection conexion = new MySqlConnection();
-            conexion.ConnectionString = "Server=127.0.0.1;Database=interfaces; Uid=root;Pwd=root;";
-            conexion.Open();
-
-            string st = "INSERT INTO alumnos(id_alumno, alumno)VALUES('" + textBox1.Text + "'," + textBox2.Text + ")";
-
-            MySqlCommand comando = new MySqlCommand(st, conexion);
-            comando.ExecuteNonQuery();
-            conexion.Close();
-
+            form3.Show();
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             dataGridView1.Refresh();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
