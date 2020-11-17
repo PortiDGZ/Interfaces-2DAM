@@ -27,16 +27,10 @@ namespace insertalumno
 
         private void button1_Click(object sender, EventArgs e)
         {
+            insertalumno.Form3 form3 = new insertalumno.Form3();
 
-            MySqlConnection conexion = new MySqlConnection();
-            conexion.ConnectionString = "Server=127.0.0.1;Database=interfaces; Uid=root;Pwd=root;";
-            conexion.Open();
+            form3.Show();
 
-            string st = "INSERT INTO alumnos(id_alumno, alumno)VALUES('" + textBox1.Text + "'," + textBox2.Text + ")";
-
-            MySqlCommand comando = new MySqlCommand(st, conexion);
-            comando.ExecuteNonQuery();
-            conexion.Close();
 
 
         }
