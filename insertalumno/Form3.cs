@@ -18,27 +18,14 @@ namespace insertalumno
             InitializeComponent();
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection conexion = new MySqlConnection();
-            conexion.ConnectionString = "Server=127.0.0.1;Database=interfaces; Uid=root;Pwd=root;";
-            conexion.Open();
 
-            string st = "INSERT INTO alumnos(id_alumno, nombre, apellidos, CP, provincia, población, fecha_nacimiento) VALUES('" + textBox1.Text + "'," + textBox2.Text + ")";
-
-            MySqlCommand comando = new MySqlCommand(st, conexion);
-            comando.ExecuteNonQuery();
-            conexion.Close();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -62,9 +49,28 @@ namespace insertalumno
             conexion.Close();
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = "Server=127.0.0.1;Database=interfaces; Uid=root;Pwd=root;";
+            conexion.Open();
+
+            string st = "SELECT * FROM municipios WHERE " + comboBox1.SelectedItem + "= municipios.ID;";
+
+            MySqlCommand comando = new MySqlCommand(st, conexion);
+            comando.ExecuteNonQuery();
+            MySqlDataAdapter da1 = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da1.Fill(dt);
+            comboBox2.ValueMember = "id";
+            comboBox2.DisplayMember = "municipio";
+            comboBox2.DataSource = dt;
+            conexion.Close();
+        }
+
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
     }
 }
