@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +35,9 @@ namespace Factura_presu
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = "Server=interfaces;Database=interfaces; Uid=root;Pwd=root;";
+            conexion.Open();
         }
     }
 }
