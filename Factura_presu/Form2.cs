@@ -31,8 +31,8 @@ namespace Factura_presu
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlConnection conexion = new MySqlConnection();
-            conexion.ConnectionString = "datasource=127.0.0.1;port=3307;Uid=root;Pwd=root;Database=provincias;";
-            string cadena = "insert into articulos(ID,Nombre, Precio, Marca, P/N, Familia) values ('" + textBox1.Text + "'," + textBox2.Text + "'," + textBox3.Text + "'," + textBox4.Text + "'," + textBox5.Text + "'," + textBox6.Text + ")";
+            conexion.ConnectionString = "datasource=127.0.0.1;port=3306;Uid=root;Pwd=root;Database=interfaces;";
+            string cadena = "insert into articulos(ID,Nombre, Precio, Marca, P/N, Familia) values (" + textBox1.Text + "'," + textBox2
             MySqlCommand comando = new MySqlCommand(cadena, conexion);
             conexion.Open();
             comando.ExecuteNonQuery();
@@ -40,8 +40,6 @@ namespace Factura_presu
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            MySqlConnection conexion = new MySqlConnection();
-            conexion.ConnectionString = "Server=interfaces;Database=interfaces; Uid=root;Pwd=root;";
             
         }
     }
