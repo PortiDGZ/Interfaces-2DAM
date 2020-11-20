@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,8 +32,8 @@ namespace Factura_presu
         {
             MySqlConnection conexion = new MySqlConnection();
             conexion.ConnectionString = "Server=interfaces;Database=interfaces; Uid=root;Pwd=root;";
-            string cadena = "insert into articulos(ID,Nombre, Precio, Marca, P/N, Familia) values ('" + descri + "'," + precio + ")";
-            SqlCommand comando = new SqlCommand(cadena, conexion);
+            string cadena = "insert into articulos(ID,Nombre, Precio, Marca, P/N, Familia) values ('" + textBox1.Text + "'," + textBox2.Text + "'," + textBox3.Text + "'," + textBox4.Text + "'," + textBox5.Text + "'," + textBox6.Text + ")";
+            MySqlCommand comando = new MySqlCommand(cadena, conexion);
             conexion.Open();
             comando.ExecuteNonQuery();
         }
