@@ -77,7 +77,7 @@ namespace Ahorcado
                 b.Font = new Font(FontFamily.GenericSansSerif, 20, FontStyle.Bold);
                 b.Size = new Size(40, 40);
                 b.BackColor = Color.LawnGreen;
-                b.Click += b_Click; // Event hook-up
+                b.Click += Pantalla_de_juego_Load; // Event hook-up
             }
 
 
