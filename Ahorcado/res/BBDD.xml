@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wordList>
+        <category an="Animales">
+	   		<animal>Gato</animal>
+	   		<animal>Perro</animal>
+	   		<animal>Serpiente</animal>
+	   		<animal>Oso</animal>
+	   		<animal>Murcielago</animal>
+	   		<animal>Pato</animal>
+	   		<animal>Mono</animal>
+	   		<animal>Salmon</animal>
+		</category >
+		<category comi="Comida">
+	   		<comida>Pescado</comida>
+	   		<comida>Carne</comida>
+	   		<comida>Limon</comida>
+	   		<comida>Pan</comida>
+	   		<comida>Arroz</comida>
+	   		<comida>Maiz</comida>
+	   		<comida>Ternera</comida>
+	   		<comida>Queso</comida>
+	   		<comida>Tarta</comida>
+		</category >
+        <category dep="Deportes">
+	   		<deporte>Futbol</deporte>
+	   		<deporte>Tenis</deporte>
+	   		<deporte>Padel</deporte>
+	   		<deporte>Esqui</deporte>
+	   		<deporte>Atletismo</deporte>
+	   		<deporte>Tiro con Arco</deporte>
+	   		<deporte>Calistenia</deporte>
+	   		<deporte>Crossfit</deporte>
+	   		<deporte>Baloncesto</deporte>
+		</category >
+        <category tec="Tecnologia">
+	   		<tecnologia>Televisor</tecnologia>
+	   		<tecnologia>Movil</tecnologia>
+	   		<tecnologia>Ordenador</tecnologia>
+	   		<tecnologia>PDA</tecnologia>
+	   		<tecnologia>Ereader</tecnologia>
+	   		<tecnologia>Tablet</tecnologia>
+		</category >
+        <category com="Hardware">
+	   		<componente>Procesador</componente>
+	   		<componente>PSU</componente>
+	   		<componente>RAM</componente>
+	   		<componente>HDD</componente>
+	   		<componente>SSD</componente>
+	   		<componente>GPU</componente>
+	   		<componente>Disipador</componente>
+		</category >
+        <category inf="Informatica">
+	   		<info>Array</info>
+	   		<info>Integer</info>
+	   		<info>Java</info>
+	   		<info>OOP</info>
+	   		<info>ERP</info>
+	   		<info>Interfaz</info>
+	   		<info>Herencia</info>
+	   		<info>Abstraccion</info>
+	   		<info>Polimorfismo</info>
+		</category >
+</wordList>
