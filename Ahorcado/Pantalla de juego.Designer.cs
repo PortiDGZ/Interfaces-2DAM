@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace Ahorcado
 {
     partial class Pantalla_de_juego
@@ -37,12 +39,16 @@ namespace Ahorcado
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.metroButton29 = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.resultadoFinal = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.resolveBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,44 +89,30 @@ namespace Ahorcado
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Location = new System.Drawing.Point(47, 88);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 324);
+            this.pictureBox1.Size = new System.Drawing.Size(274, 324);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // resultadoFinal
-            // 
-            this.resultadoFinal.AutoSize = true;
-            this.resultadoFinal.Location = new System.Drawing.Point(356, 294);
-            this.resultadoFinal.Name = "resultadoFinal";
-            this.resultadoFinal.Size = new System.Drawing.Size(93, 19);
-            this.resultadoFinal.TabIndex = 5;
-            this.resultadoFinal.Text = "Gana o Pierde";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(620, 436);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 7;
-            this.metroButton1.Text = "Probar";
-            this.metroButton1.UseSelectable = true;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(701, 436);
+            this.metroButton2.Location = new System.Drawing.Point(710, 436);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.Size = new System.Drawing.Size(66, 23);
             this.metroButton2.TabIndex = 8;
             this.metroButton2.Text = "Resolver";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroComboBox1
             // 
             this.metroComboBox1.FormattingEnabled = true;
             this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(951, 66);
+            this.metroComboBox1.Location = new System.Drawing.Point(1105, 66);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
             this.metroComboBox1.TabIndex = 9;
@@ -130,7 +122,8 @@ namespace Ahorcado
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(863, 76);
+            this.metroLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel3.Location = new System.Drawing.Point(1029, 66);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(70, 19);
             this.metroLabel3.TabIndex = 10;
@@ -138,10 +131,69 @@ namespace Ahorcado
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(829, 263);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(434, 196);
             this.flowLayoutPanel1.TabIndex = 11;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblInfo.Location = new System.Drawing.Point(1014, 207);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(0, 25);
+            this.lblInfo.TabIndex = 12;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(327, 88);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(687, 68);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            // 
+            // resolveBox
+            // 
+            this.resolveBox.Location = new System.Drawing.Point(691, 410);
+            this.resolveBox.Name = "resolveBox";
+            this.resolveBox.Size = new System.Drawing.Size(100, 20);
+            this.resolveBox.TabIndex = 15;
+            this.resolveBox.TextChanged += new System.EventHandler(this.resolveBox_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1123, 101);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Jugar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(349, 239);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 37);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "label1";
             // 
             // Pantalla_de_juego
             // 
@@ -149,12 +201,16 @@ namespace Ahorcado
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1329, 504);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.resolveBox);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.resultadoFinal);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroButton29);
             this.Controls.Add(this.metroLabel2);
@@ -168,6 +224,11 @@ namespace Ahorcado
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
@@ -175,11 +236,15 @@ namespace Ahorcado
         private System.Windows.Forms.ImageList imageList1;
         private MetroFramework.Controls.MetroButton metroButton29;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroLabel resultadoFinal;
-        private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox resolveBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
     }
 }
