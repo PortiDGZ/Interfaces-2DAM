@@ -19,16 +19,18 @@ namespace Ahorcado
 
         List<Label> labels = new List<Label>();
         // Word under consideration
-        public string currentWord { get; set; }
-        // Default character for hidden word letters
+        public string currentWord { get => currentWord1; set => currentWord1 = value; }         // Default character for hidden word letters
         public string DefaultChar { get { return "__"; } }
         ArrayList coleccion = new ArrayList();
         string resolver = "";
         ArrayList aguiones = new ArrayList();
         ArrayList palabras = new ArrayList();
         int puntos = 0;
+        int contador = 8;
 
         private string usuarioRef;
+        private string currentWord1 = "";
+
         public Pantalla_de_juego(string valor)
         {
             InitializeComponent();
@@ -47,6 +49,7 @@ namespace Ahorcado
             }
             label1.Text = "0";
             this.usuarioRef = valor;
+
 
         }
 
@@ -109,7 +112,7 @@ namespace Ahorcado
         }
         void b_Click(object sender, EventArgs e)
         {
-            int contador = 0;
+
             Button b = (Button)sender;
             char charClicked = b.Text.ToCharArray()[0];
             b.Enabled = false;
@@ -144,59 +147,62 @@ namespace Ahorcado
                 // Fallo
                 if ((!(resolver = resolver.ToUpper()).Contains(charClicked)))
                 {
-                    contador++;
+
+                    contador--;
                     puntos -= 1;
                     label1.Text = puntos.ToString();
 
-                    if(contador == 1)
+                    switch (contador)
                     {
-                        pictureBox1.Image = Image.FromFile("./res/1.jpg");
+
+                        case 7:
+                            pictureBox1.Image = Image.FromFile("./res/1.jpg");
+
+                            break;
+                        case 6:
+                            pictureBox1.Image = Image.FromFile("./res/2.jpg");
+
+                            break;
+                        case 5:
+                            pictureBox1.Image = Image.FromFile("./res/3.jpg");
+
+                            break;
+                        case 4:
+                            pictureBox1.Image = Image.FromFile("./res/4.jpg");
+
+                            break;
+                        case 3:
+                            pictureBox1.Image = Image.FromFile("./res/5.jpg");
+
+                            break;
+                        case 2:
+                            pictureBox1.Image = Image.FromFile("./res/6.jpg");
+
+                            break;
+                        case 1:
+                            pictureBox1.Image = Image.FromFile("./res/7.jpg");
+                            lblInfo.Text = "Has perdido";
+                            lblInfo.ForeColor = Color.Red;
+                            flowLayoutPanel1.Enabled = false;
+
+                            // Revela la palabra
+                            for (int i = 0; i < resolver.Length; i++)
+                            {
+                                if (labels[i].Text.Equals(DefaultChar))
+                                {
+                                    labels[i].Text = resolver[i].ToString();
+                                    labels[i].ForeColor = Color.Blue;
+                                }
+
+                            }
+
+                            break;
 
                     }
-                    if (contador == 3)
-                    {
-                        pictureBox1.Image = Image.FromFile("./res/2.jpg");
-                       
-                    }
-                    if (contador == 56)
-                    {
-                        pictureBox1.Image = Image.FromFile("./res/3.jpg");
-                    }
-                    if (contador == 4)
-                    {
-                        pictureBox1.Image = Image.FromFile("./res/4.jpg");
-                    }
-                    if (contador == 5)
-                    {
-                        pictureBox1.Image = Image.FromFile("./res/5.jpg");
-                    }
-                    if (contador == 6)
-                    {
-                        pictureBox1.Image = Image.FromFile("./res/6.jpg");
-                    }
-                    if (contador == 7)
-                    {
-                        pictureBox1.Image = Image.FromFile("./res/7.jpg");
-                    }
-                }
-                lblInfo.Text = "Has fallado";
-                lblInfo.ForeColor = Color.Brown;
+                    pictureBox1.Refresh();
+                    lblInfo.Text = "Has fallado";
+                    lblInfo.ForeColor = Color.Brown;
 
-                if (contador == 0)
-                {
-                    lblInfo.Text = "Has perdido";
-                    lblInfo.ForeColor = Color.Red;
-                    flowLayoutPanel1.Enabled = false;
-
-                    // Revela la letra
-                    for (int i = 0; i < currentWord.Length; i++)
-                    {
-                        if (labels[i].Text.Equals(DefaultChar))
-                        {
-                            labels[i].Text = currentWord[i].ToString();
-                            labels[i].ForeColor = Color.Blue;
-                        }
-                    }
                 }
             }
         }
@@ -401,11 +407,22 @@ namespace Ahorcado
         private void metroButton2_Click(object sender, EventArgs e)
         {
 
-            if (resolver.ToUpper().Equals(currentWord.ToUpper()))
+            /*string respuesta = "";
+
+            for (int i = 0; i < resolver.Length; i++)
             {
+                respuesta = resolver[i].ToString().ToUpper();
+
+             
+            }
+
+            if (respuesta.Equals(resolveBox.Text.ToUpper())){
 
                 puntos += 10;
-            }
+
+            }*/
+
+            MessageBox.Show("Esta característica todavía no está implementada, siga jugando :)", "Control no implementado"); 
         }
 
         private void resolveBox_TextChanged(object sender, EventArgs e)
