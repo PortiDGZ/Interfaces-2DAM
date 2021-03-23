@@ -23,7 +23,7 @@ namespace WindowsFormsApp3
             cantidad = Convert.ToDouble(cantidad_mask.Text);
             precio = Convert.ToDouble(prec_mask.Text);
             calculo = (cantidad * precio) * 1.21;
-            placeholder_lbl.Text = Convert.ToString(calculo);
+            placeholder_lbl.Text = Convert.ToString(calculo) + "€";
              
         }
 

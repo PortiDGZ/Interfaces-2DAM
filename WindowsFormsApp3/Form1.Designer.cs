@@ -101,9 +101,8 @@
             this.placeholder_lbl.AutoSize = true;
             this.placeholder_lbl.Location = new System.Drawing.Point(222, 260);
             this.placeholder_lbl.Name = "placeholder_lbl";
-            this.placeholder_lbl.Size = new System.Drawing.Size(86, 13);
+            this.placeholder_lbl.Size = new System.Drawing.Size(0, 13);
             this.placeholder_lbl.TabIndex = 9;
-            this.placeholder_lbl.Text = "PLACEHOLDER";
             // 
             // prec_mask
             // 
