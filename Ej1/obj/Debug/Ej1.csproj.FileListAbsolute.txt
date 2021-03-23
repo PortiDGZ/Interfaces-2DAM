@@ -1,0 +1,11 @@
+C:\Users\USUARIO\source\repos\Ej1\bin\Debug\Ej1.exe.config
+C:\Users\USUARIO\source\repos\Ej1\bin\Debug\Ej1.exe
+C:\Users\USUARIO\source\repos\Ej1\bin\Debug\Ej1.pdb
+C:\Users\USUARIO\source\repos\Ej1\obj\Debug\Ej1.csprojAssemblyReference.cache
+C:\Users\USUARIO\source\repos\Ej1\obj\Debug\Ej1.Form1.resources
+C:\Users\USUARIO\source\repos\Ej1\obj\Debug\Ej1.Properties.Resources.resources
+C:\Users\USUARIO\source\repos\Ej1\obj\Debug\Ej1.csproj.GenerateResource.cache
+C:\Users\USUARIO\source\repos\Ej1\obj\Debug\Ej1.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\Ej1\obj\Debug\Ej1.exe
+C:\Users\USUARIO\source\repos\Ej1\obj\Debug\Ej1.pdb
+C:\Users\USUARIO\source\repos\Ej1\obj\Debug\Ej1.Form2.resources
