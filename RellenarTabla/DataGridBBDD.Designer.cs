@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.interfacesDataSet = new RellenarTabla.interfacesDataSet();
             this.interfacesDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.alta_btn = new System.Windows.Forms.Button();
+            this.baja_btn = new System.Windows.Forms.Button();
+            this.mod_btn = new System.Windows.Forms.Button();
             this.tablaDatos = new System.Windows.Forms.DataGridView();
-            this.interfacesDataSet1 = new RellenarTabla.interfacesDataSet1();
-            this.alumnosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.alumnosTableAdapter = new RellenarTabla.interfacesDataSet1TableAdapters.alumnosTableAdapter();
             this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,14 +42,14 @@
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.provinciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.poblacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alta_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.alumnosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.interfacesDataSet1 = new RellenarTabla.interfacesDataSet1();
+            this.alumnosTableAdapter = new RellenarTabla.interfacesDataSet1TableAdapters.alumnosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.interfacesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.interfacesDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.interfacesDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.interfacesDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // interfacesDataSet
@@ -61,6 +61,36 @@
             // 
             this.interfacesDataSetBindingSource.DataSource = this.interfacesDataSet;
             this.interfacesDataSetBindingSource.Position = 0;
+            // 
+            // alta_btn
+            // 
+            this.alta_btn.Location = new System.Drawing.Point(424, 61);
+            this.alta_btn.Name = "alta_btn";
+            this.alta_btn.Size = new System.Drawing.Size(75, 23);
+            this.alta_btn.TabIndex = 2;
+            this.alta_btn.Text = "ALTA";
+            this.alta_btn.UseVisualStyleBackColor = true;
+            this.alta_btn.Click += new System.EventHandler(this.alta_btn_Click);
+            // 
+            // baja_btn
+            // 
+            this.baja_btn.Location = new System.Drawing.Point(575, 61);
+            this.baja_btn.Name = "baja_btn";
+            this.baja_btn.Size = new System.Drawing.Size(75, 23);
+            this.baja_btn.TabIndex = 3;
+            this.baja_btn.Text = "BAJA";
+            this.baja_btn.UseVisualStyleBackColor = true;
+            this.baja_btn.Click += new System.EventHandler(this.baja_btn_Click);
+            // 
+            // mod_btn
+            // 
+            this.mod_btn.Location = new System.Drawing.Point(747, 61);
+            this.mod_btn.Name = "mod_btn";
+            this.mod_btn.Size = new System.Drawing.Size(95, 23);
+            this.mod_btn.TabIndex = 4;
+            this.mod_btn.Text = "MODIFICACIÓN";
+            this.mod_btn.UseVisualStyleBackColor = true;
+            this.mod_btn.Click += new System.EventHandler(this.mod_btn_Click);
             // 
             // tablaDatos
             // 
@@ -75,24 +105,11 @@
             this.provinciaDataGridViewTextBoxColumn,
             this.poblacionDataGridViewTextBoxColumn});
             this.tablaDatos.DataSource = this.alumnosBindingSource;
-            this.tablaDatos.Location = new System.Drawing.Point(230, 142);
+            this.tablaDatos.Location = new System.Drawing.Point(176, 202);
             this.tablaDatos.Name = "tablaDatos";
-            this.tablaDatos.Size = new System.Drawing.Size(748, 277);
-            this.tablaDatos.TabIndex = 0;
-            // 
-            // interfacesDataSet1
-            // 
-            this.interfacesDataSet1.DataSetName = "interfacesDataSet1";
-            this.interfacesDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // alumnosBindingSource
-            // 
-            this.alumnosBindingSource.DataMember = "alumnos";
-            this.alumnosBindingSource.DataSource = this.interfacesDataSet1;
-            // 
-            // alumnosTableAdapter
-            // 
-            this.alumnosTableAdapter.ClearBeforeFill = true;
+            this.tablaDatos.Size = new System.Drawing.Size(755, 177);
+            this.tablaDatos.TabIndex = 5;
+            this.tablaDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDatos_CellClick);
             // 
             // dniDataGridViewTextBoxColumn
             // 
@@ -136,51 +153,37 @@
             this.poblacionDataGridViewTextBoxColumn.HeaderText = "poblacion";
             this.poblacionDataGridViewTextBoxColumn.Name = "poblacionDataGridViewTextBoxColumn";
             // 
-            // alta_btn
+            // alumnosBindingSource
             // 
-            this.alta_btn.Location = new System.Drawing.Point(424, 61);
-            this.alta_btn.Name = "alta_btn";
-            this.alta_btn.Size = new System.Drawing.Size(75, 23);
-            this.alta_btn.TabIndex = 2;
-            this.alta_btn.Text = "ALTA";
-            this.alta_btn.UseVisualStyleBackColor = true;
-            this.alta_btn.Click += new System.EventHandler(this.alta_btn_Click);
+            this.alumnosBindingSource.DataMember = "alumnos";
+            this.alumnosBindingSource.DataSource = this.interfacesDataSet1;
             // 
-            // button1
+            // interfacesDataSet1
             // 
-            this.button1.Location = new System.Drawing.Point(575, 61);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "BAJA";
-            this.button1.UseVisualStyleBackColor = true;
+            this.interfacesDataSet1.DataSetName = "interfacesDataSet1";
+            this.interfacesDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button2
+            // alumnosTableAdapter
             // 
-            this.button2.Location = new System.Drawing.Point(747, 61);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "MODIFICACIÓN";
-            this.button2.UseVisualStyleBackColor = true;
+            this.alumnosTableAdapter.ClearBeforeFill = true;
             // 
             // DataGridBBDD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.alta_btn);
             this.Controls.Add(this.tablaDatos);
+            this.Controls.Add(this.mod_btn);
+            this.Controls.Add(this.baja_btn);
+            this.Controls.Add(this.alta_btn);
             this.Name = "DataGridBBDD";
             this.Text = "DataGridBBDD";
             this.Load += new System.EventHandler(this.DataGridBBDD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.interfacesDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.interfacesDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.interfacesDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.interfacesDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -189,10 +192,13 @@
 
         private interfacesDataSet interfacesDataSet;
         private System.Windows.Forms.BindingSource interfacesDataSetBindingSource;
-        private System.Windows.Forms.DataGridView tablaDatos;
         private interfacesDataSet1 interfacesDataSet1;
         private System.Windows.Forms.BindingSource alumnosBindingSource;
         private interfacesDataSet1TableAdapters.alumnosTableAdapter alumnosTableAdapter;
+        private System.Windows.Forms.Button alta_btn;
+        private System.Windows.Forms.Button baja_btn;
+        private System.Windows.Forms.Button mod_btn;
+        private System.Windows.Forms.DataGridView tablaDatos;
         private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
@@ -200,8 +206,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn provinciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn poblacionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button alta_btn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }

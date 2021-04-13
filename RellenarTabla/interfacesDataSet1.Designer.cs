@@ -419,7 +419,7 @@ namespace RellenarTabla {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public alumnosRow AddalumnosRow(string dni, string nombre, string apellidos, string curso, int telefono, string provincia, string poblacion) {
+            public alumnosRow AddalumnosRow(string dni, string nombre, string apellidos, string curso, string telefono, string provincia, string poblacion) {
                 alumnosRow rowalumnosRow = ((alumnosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         dni,
@@ -478,7 +478,7 @@ namespace RellenarTabla {
                 base.Columns.Add(this.columnapellidos);
                 this.columncurso = new global::System.Data.DataColumn("curso", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncurso);
-                this.columntelefono = new global::System.Data.DataColumn("telefono", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columntelefono = new global::System.Data.DataColumn("telefono", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntelefono);
                 this.columnprovincia = new global::System.Data.DataColumn("provincia", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprovincia);
@@ -695,10 +695,10 @@ namespace RellenarTabla {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int telefono {
+            public string telefono {
                 get {
                     try {
-                        return ((int)(this[this.tablealumnos.telefonoColumn]));
+                        return ((string)(this[this.tablealumnos.telefonoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono\' de la tabla \'alumnos\' es DBNull.", e);
