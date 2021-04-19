@@ -63,6 +63,12 @@
     <Compile Include="Alta.Designer.cs">
       <DependentUpon>Alta.cs</DependentUpon>
     </Compile>
+    <Compile Include="AltaCombo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaCombo.Designer.cs">
+      <DependentUpon>AltaCombo.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataGridBBDD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Alta.resx">
       <DependentUpon>Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaCombo.resx">
+      <DependentUpon>AltaCombo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataGridBBDD.resx">
       <DependentUpon>DataGridBBDD.cs</DependentUpon>

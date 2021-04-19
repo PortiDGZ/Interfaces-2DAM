@@ -9,6 +9,7 @@ namespace RellenarTabla
     {
         Alta Alta = new Alta();
         modificar modificar = new modificar();
+        AltaCombo AltaCombo = new AltaCombo();
         public DataGridBBDD()
         {
             InitializeComponent();
@@ -180,5 +181,58 @@ namespace RellenarTabla
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AltaCombo.ShowDialog();
+            if (AltaCombo.DialogResult == DialogResult.OK)
+            {
+                string path = "Server=localhost,3306;Database=interfaces;User Id=root;Password=root;";
+                string dni = AltaCombo.dni_txt.Text;
+                string nombre = AltaCombo.name_txt.Text;
+                string apellidos = AltaCombo.ape_txt.Text;
+                string curso = AltaCombo.curso_txt.Text;
+                string telefono = AltaCombo.tlf_txt.Text;
+                string provincia = AltaCombo.cbProv.Text;
+                string poblacion = AltaCombo.cbPob.Text;
+                string query = $"INSERT INTO alumnos (dni, nombre, apellidos, curso, telefono, provincia, poblacion) VALUES('{dni}', '{nombre}', '{apellidos}', '{curso}', '{telefono}', '{provincia}', '{poblacion}')";
+                MySqlConnection conn = new MySqlConnection(path);
+                do
+                {
+
+
+
+                } while (String.IsNullOrEmpty(dni) || String.IsNullOrWhiteSpace(dni));
+
+
+
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.ConnectionString = path;
+                    conn.Open();
+                }
+
+
+                //Creamos la conexión 
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                //Ejecutamos la query
+                cmd.ExecuteNonQuery();
+
+
+
+
+                //Cerramos la conexión al terminar el foreach
+                conn.Close();
+                refreshdata();
+                Alta.dni_txt.Clear();
+                Alta.name_txt.Clear();
+                Alta.ape_txt.Clear();
+                Alta.curso_txt.Clear();
+                Alta.tlf_txt.Clear();
+                Alta.prov_txt.Clear();
+                Alta.pob_txt.Clear();
+            }
+        }
     }
     }

@@ -33,8 +33,6 @@
             this.ape_txt = new System.Windows.Forms.TextBox();
             this.curso_txt = new System.Windows.Forms.TextBox();
             this.tlf_txt = new System.Windows.Forms.TextBox();
-            this.prov_txt = new System.Windows.Forms.TextBox();
-            this.pob_txt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +41,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pob_txt = new System.Windows.Forms.TextBox();
+            this.prov_txt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // dni_txt
@@ -79,20 +79,6 @@
             this.tlf_txt.Name = "tlf_txt";
             this.tlf_txt.Size = new System.Drawing.Size(100, 20);
             this.tlf_txt.TabIndex = 4;
-            // 
-            // prov_txt
-            // 
-            this.prov_txt.Location = new System.Drawing.Point(174, 305);
-            this.prov_txt.Name = "prov_txt";
-            this.prov_txt.Size = new System.Drawing.Size(100, 20);
-            this.prov_txt.TabIndex = 5;
-            // 
-            // pob_txt
-            // 
-            this.pob_txt.Location = new System.Drawing.Point(174, 354);
-            this.pob_txt.Name = "pob_txt";
-            this.pob_txt.Size = new System.Drawing.Size(100, 20);
-            this.pob_txt.TabIndex = 6;
             // 
             // label1
             // 
@@ -168,6 +154,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pob_txt
+            // 
+            this.pob_txt.Location = new System.Drawing.Point(174, 354);
+            this.pob_txt.Name = "pob_txt";
+            this.pob_txt.Size = new System.Drawing.Size(100, 20);
+            this.pob_txt.TabIndex = 6;
+            // 
+            // prov_txt
+            // 
+            this.prov_txt.Location = new System.Drawing.Point(174, 305);
+            this.prov_txt.Name = "prov_txt";
+            this.prov_txt.Size = new System.Drawing.Size(100, 20);
+            this.prov_txt.TabIndex = 5;
+            // 
             // Alta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,7 +209,7 @@
         public System.Windows.Forms.TextBox ape_txt;
         public System.Windows.Forms.TextBox curso_txt;
         public System.Windows.Forms.TextBox tlf_txt;
-        public System.Windows.Forms.TextBox prov_txt;
         public System.Windows.Forms.TextBox pob_txt;
+        public System.Windows.Forms.TextBox prov_txt;
     }
 }

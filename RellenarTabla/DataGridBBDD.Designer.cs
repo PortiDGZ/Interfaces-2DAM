@@ -45,6 +45,7 @@
             this.alumnosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.interfacesDataSet1 = new RellenarTabla.interfacesDataSet1();
             this.alumnosTableAdapter = new RellenarTabla.interfacesDataSet1TableAdapters.alumnosTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.interfacesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.interfacesDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
@@ -167,11 +168,22 @@
             // 
             this.alumnosTableAdapter.ClearBeforeFill = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(424, 105);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "ALTA CB";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // DataGridBBDD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tablaDatos);
             this.Controls.Add(this.mod_btn);
             this.Controls.Add(this.baja_btn);
@@ -206,5 +218,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn provinciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn poblacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }
