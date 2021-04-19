@@ -27,3 +27,4 @@ C:\Users\USUARIO\source\repos\RellenarTabla\obj\Debug\RellenarTabla.exe.config
 C:\Users\USUARIO\source\repos\RellenarTabla\obj\Debug\RellenarTabla.DataGridBBDD.resources
 C:\Users\USUARIO\source\repos\RellenarTabla\obj\Debug\RellenarTabla.csproj.CopyComplete
 C:\Users\USUARIO\source\repos\RellenarTabla\obj\Debug\RellenarTabla.AltaCombo.resources
+C:\Users\USUARIO\source\repos\RellenarTabla\obj\Debug\RellenarTabla.ModificarCombo.resources

@@ -35,6 +35,7 @@
             this.baja_btn = new System.Windows.Forms.Button();
             this.mod_btn = new System.Windows.Forms.Button();
             this.tablaDatos = new System.Windows.Forms.DataGridView();
+            this.altacb_btn = new System.Windows.Forms.Button();
             this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +46,7 @@
             this.alumnosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.interfacesDataSet1 = new RellenarTabla.interfacesDataSet1();
             this.alumnosTableAdapter = new RellenarTabla.interfacesDataSet1TableAdapters.alumnosTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
+            this.modcb_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.interfacesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.interfacesDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
@@ -112,6 +113,16 @@
             this.tablaDatos.TabIndex = 5;
             this.tablaDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDatos_CellClick);
             // 
+            // altacb_btn
+            // 
+            this.altacb_btn.Location = new System.Drawing.Point(424, 105);
+            this.altacb_btn.Name = "altacb_btn";
+            this.altacb_btn.Size = new System.Drawing.Size(75, 23);
+            this.altacb_btn.TabIndex = 6;
+            this.altacb_btn.Text = "ALTA CB";
+            this.altacb_btn.UseVisualStyleBackColor = true;
+            this.altacb_btn.Click += new System.EventHandler(this.button1_Click);
+            // 
             // dniDataGridViewTextBoxColumn
             // 
             this.dniDataGridViewTextBoxColumn.DataPropertyName = "dni";
@@ -168,22 +179,23 @@
             // 
             this.alumnosTableAdapter.ClearBeforeFill = true;
             // 
-            // button1
+            // modcb_btn
             // 
-            this.button1.Location = new System.Drawing.Point(424, 105);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "ALTA CB";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.modcb_btn.Location = new System.Drawing.Point(758, 105);
+            this.modcb_btn.Name = "modcb_btn";
+            this.modcb_btn.Size = new System.Drawing.Size(75, 23);
+            this.modcb_btn.TabIndex = 7;
+            this.modcb_btn.Text = "MOD CB";
+            this.modcb_btn.UseVisualStyleBackColor = true;
+            this.modcb_btn.Click += new System.EventHandler(this.modcb_btn_Click);
             // 
             // DataGridBBDD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.modcb_btn);
+            this.Controls.Add(this.altacb_btn);
             this.Controls.Add(this.tablaDatos);
             this.Controls.Add(this.mod_btn);
             this.Controls.Add(this.baja_btn);
@@ -218,6 +230,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn provinciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn poblacionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button altacb_btn;
+        private System.Windows.Forms.Button modcb_btn;
     }
 }
