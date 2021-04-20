@@ -14,6 +14,7 @@ namespace RellenarTabla
     {
         Alta form = new Alta();
         modificar modificar = new modificar();
+        DataGridBBDD dataGridBBDD = new DataGridBBDD();
         public Form1()
         {
             InitializeComponent();
@@ -110,7 +111,7 @@ namespace RellenarTabla
 
         private void accesobd_btn_Click(object sender, EventArgs e)
         {
-            DataGridBBDD dataGridBBDD = new DataGridBBDD();
+            
 
             dataGridBBDD.Show();
         }

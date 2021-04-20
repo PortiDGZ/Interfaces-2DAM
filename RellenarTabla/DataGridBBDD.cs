@@ -11,6 +11,8 @@ namespace RellenarTabla
         modificar modificar = new modificar();
         AltaCombo AltaCombo = new AltaCombo();
         ModificarCombo ModificarCombo = new ModificarCombo();
+        int displaymember;
+        int displaymemberpob;
         public DataGridBBDD()
         {
             InitializeComponent();
@@ -204,6 +206,7 @@ namespace RellenarTabla
                 string telefono = AltaCombo.tlf_txt.Text;
                 string provincia = AltaCombo.cbProv.Text;
                 string poblacion = AltaCombo.cbPob.Text;
+
                 string query = $"INSERT INTO alumnos (dni, nombre, apellidos, curso, telefono, provincia, poblacion) VALUES('{dni}', '{nombre}', '{apellidos}', '{curso}', '{telefono}', '{provincia}', '{poblacion}')";
                 MySqlConnection conn = new MySqlConnection(path);
                 do
@@ -247,6 +250,7 @@ namespace RellenarTabla
 
         private void modcb_btn_Click(object sender, EventArgs e)
         {
+            
             ModificarCombo.ShowDialog();
             if (ModificarCombo.DialogResult == DialogResult.OK)
             {
