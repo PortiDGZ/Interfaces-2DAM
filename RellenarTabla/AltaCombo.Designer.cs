@@ -166,6 +166,9 @@
             // 
             // cbProv
             // 
+            this.cbProv.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.provinciasBindingSource, "id", true));
+            this.cbProv.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.provinciasBindingSource, "provincia", true));
+            this.cbProv.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.provinciasBindingSource, "provincia", true));
             this.cbProv.DataSource = this.provinciasBindingSource;
             this.cbProv.DisplayMember = "provincia";
             this.cbProv.FormattingEnabled = true;
@@ -193,11 +196,17 @@
             // 
             // cbPob
             // 
+            this.cbPob.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.municipiosBindingSource, "municipio", true));
+            this.cbPob.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.municipiosBindingSource, "id", true));
+            this.cbPob.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.municipiosBindingSource, "municipio", true));
+            this.cbPob.DataSource = this.municipiosBindingSource;
+            this.cbPob.DisplayMember = "municipio";
             this.cbPob.FormattingEnabled = true;
             this.cbPob.Location = new System.Drawing.Point(338, 368);
             this.cbPob.Name = "cbPob";
             this.cbPob.Size = new System.Drawing.Size(121, 21);
             this.cbPob.TabIndex = 31;
+            this.cbPob.ValueMember = "id";
             // 
             // provinciasTableAdapter
             // 

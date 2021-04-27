@@ -11,8 +11,6 @@ namespace RellenarTabla
         modificar modificar = new modificar();
         AltaCombo AltaCombo = new AltaCombo();
         ModificarCombo ModificarCombo = new ModificarCombo();
-        int displaymember;
-        int displaymemberpob;
         public DataGridBBDD()
         {
             InitializeComponent();
@@ -204,7 +202,7 @@ namespace RellenarTabla
                 string apellidos = AltaCombo.ape_txt.Text;
                 string curso = AltaCombo.curso_txt.Text;
                 string telefono = AltaCombo.tlf_txt.Text;
-                string provincia = AltaCombo.cbProv.Text;
+                int provincia = Convert.ToInt32(AltaCombo.cbProv.SelectedValue.ToString());
                 string poblacion = AltaCombo.cbPob.Text;
 
                 string query = $"INSERT INTO alumnos (dni, nombre, apellidos, curso, telefono, provincia, poblacion) VALUES('{dni}', '{nombre}', '{apellidos}', '{curso}', '{telefono}', '{provincia}', '{poblacion}')";
@@ -243,8 +241,6 @@ namespace RellenarTabla
                 AltaCombo.ape_txt.Clear();
                 AltaCombo.curso_txt.Clear();
                 AltaCombo.tlf_txt.Clear();
-                AltaCombo.cbProv.Items.Clear();
-                AltaCombo.cbPob.Items.Clear();
             }
         }
 

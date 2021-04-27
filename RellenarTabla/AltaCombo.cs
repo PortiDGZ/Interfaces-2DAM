@@ -27,22 +27,22 @@ namespace RellenarTabla
             this.provinciasTableAdapter.Fill(this.interfacesDataSet1.provincias);
             MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=interfaces;User Id=root;Password=root;");
 
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM provincias", conn);
+            /*MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM provincias", conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            cbProv.DataSource = dt;
+            cbProv.DataSource = dt;*/
         }
 
         private void cbProv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=interfaces;User Id=root;Password=root;");
+            /*MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=interfaces;User Id=root;Password=root;");
 
             MySqlDataAdapter da2 = new MySqlDataAdapter($"SELECT * FROM municipios where provincia = {cbProv.SelectedValue.ToString()}", conn);
             DataTable dt2 = new DataTable();
             da2.Fill(dt2);
             cbPob.DisplayMember = "municipio";
             cbPob.ValueMember = "id";
-            cbPob.DataSource = dt2;
+            cbPob.DataSource = dt2;*/
 
         }
 

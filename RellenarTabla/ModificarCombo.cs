@@ -29,6 +29,7 @@ namespace RellenarTabla
             cbPob.ValueMember = "id";
             cbPob.DataSource = dt2;
 
+
         }
 
         private void ModificarCombo_Load(object sender, EventArgs e)
@@ -39,6 +40,8 @@ namespace RellenarTabla
             DataTable dt = new DataTable();
             da.Fill(dt);
             cbProv.DataSource = dt;
+            string cb_Prov = cbProv.Text.ToString();
+           
         }
     }
 }
