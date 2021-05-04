@@ -24,3 +24,4 @@ C:\Users\USUARIO\source\repos\GestionSeguros\obj\Debug\GestionSeguros.csproj.Cor
 C:\Users\USUARIO\source\repos\GestionSeguros\obj\Debug\GestionSeguros.csproj.CopyComplete
 C:\Users\USUARIO\source\repos\GestionSeguros\obj\Debug\GestionSeguros.exe
 C:\Users\USUARIO\source\repos\GestionSeguros\obj\Debug\GestionSeguros.pdb
+C:\Users\USUARIO\source\repos\GestionSeguros\obj\Debug\GestionSeguros.Alta.resources

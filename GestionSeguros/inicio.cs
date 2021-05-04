@@ -16,5 +16,12 @@ namespace GestionSeguros
         {
             InitializeComponent();
         }
+
+        private void inicio_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'gestionDataSet.datos' Puede moverla o quitarla según sea necesario.
+            this.datosTableAdapter.Fill(this.gestionDataSet.datos);
+
+        }
     }
 }
