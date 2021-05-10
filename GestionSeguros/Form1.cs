@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GestionSeguros
@@ -20,7 +14,7 @@ namespace GestionSeguros
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=gestion;User Id=root;Password=root;");
+            MySqlConnection conn = new MySqlConnection("Server=localhost,3307;Database=interfaces;User Id=root;Password=root;");
             string user = textBox1.Text.ToString();
             string password = textBox2.Text.ToString();
 
@@ -43,6 +37,11 @@ namespace GestionSeguros
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -25,12 +25,12 @@ namespace RellenarTabla
             this.municipiosTableAdapter.Fill(this.interfacesDataSet1.municipios);
             // TODO: esta línea de código carga datos en la tabla 'interfacesDataSet1.provincias' Puede moverla o quitarla según sea necesario.
             this.provinciasTableAdapter.Fill(this.interfacesDataSet1.provincias);
-            MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=interfaces;User Id=root;Password=root;");
+            MySqlConnection conn = new MySqlConnection("Server=localhost,3307;Database=interfaces;User Id=root;Password=root;");
 
-            /*MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM provincias", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM provincias", conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            cbProv.DataSource = dt;*/
+            cbProv.DataSource = dt;
         }
 
         private void cbProv_SelectedIndexChanged(object sender, EventArgs e)

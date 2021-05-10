@@ -22,6 +22,17 @@ namespace GestionSeguros
             // TODO: esta línea de código carga datos en la tabla 'gestionDataSet.datos' Puede moverla o quitarla según sea necesario.
             this.datosTableAdapter.Fill(this.gestionDataSet.datos);
 
+
+
+        }
+
+        private void baja_btn_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewCell oneCell in tablaDatos.SelectedCells)
+            {
+                if (oneCell.Selected)
+                    tablaDatos.Rows.RemoveAt(oneCell.RowIndex);
+            }
         }
     }
 }

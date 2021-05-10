@@ -147,6 +147,7 @@
             this.baja_btn.TabIndex = 2;
             this.baja_btn.Text = "Baja";
             this.baja_btn.UseVisualStyleBackColor = true;
+            this.baja_btn.Click += new System.EventHandler(this.baja_btn_Click);
             // 
             // mod_btn
             // 

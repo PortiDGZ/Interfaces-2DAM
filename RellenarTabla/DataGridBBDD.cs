@@ -42,7 +42,7 @@ namespace RellenarTabla
             Alta.ShowDialog();
             if (Alta.DialogResult == DialogResult.OK)
             {
-                string path = "Server=localhost,3306;Database=interfaces;User Id=root;Password=root;";
+                string path = "Server=localhost,3307;Database=interfaces;User Id=root;Password=root;";
                 string dni = Alta.dni_txt.Text;
                 string nombre = Alta.name_txt.Text;
                 string apellidos = Alta.ape_txt.Text;
@@ -96,7 +96,7 @@ namespace RellenarTabla
             int rowId = tablaDatos.CurrentRow.Index;
             DataGridViewRow row = tablaDatos.Rows[rowId];
             string pk = row.Cells[0].Value.ToString();
-            string path = "Server=localhost,3306;Database=interfaces;User Id=root;Password=root;";
+            string path = "Server=localhost,3307;Database=interfaces;User Id=root;Password=root;";
             string query = $"DELETE FROM ALUMNOS WHERE dni = '{pk}'";
             MySqlConnection conn = new MySqlConnection(path);
             if (conn.State == ConnectionState.Closed)
