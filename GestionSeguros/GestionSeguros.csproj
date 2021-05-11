@@ -59,6 +59,11 @@
     <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="agencia_segurosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>agencia_segurosDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Alta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +107,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="agencia_segurosDataSet.xsc">
+      <DependentUpon>agencia_segurosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="agencia_segurosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>agencia_segurosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="agencia_segurosDataSet.xss">
+      <DependentUpon>agencia_segurosDataSet.xsd</DependentUpon>
+    </None>
     <None Include="gestionDataSet.xsc">
       <DependentUpon>gestionDataSet.xsd</DependentUpon>
     </None>

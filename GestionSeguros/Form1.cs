@@ -14,11 +14,11 @@ namespace GestionSeguros
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Server=localhost,3307;Database=interfaces;User Id=root;Password=root;");
+            MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=agencia_seguros;User Id=admin;Password=admin;");
             string user = textBox1.Text.ToString();
             string password = textBox2.Text.ToString();
 
-            MySqlDataAdapter da2 = new MySqlDataAdapter($"SELECT * FROM usuario where nombre = '{user}' AND contraseña = '{password}'", conn);
+            MySqlDataAdapter da2 = new MySqlDataAdapter($"SELECT * FROM usuario where nombre_usuario = '{user}' AND pass_usuario = '{password}'", conn);
             DataTable dt2 = new DataTable();
             da2.Fill(dt2);
             if(dt2.Rows.Count > 0)

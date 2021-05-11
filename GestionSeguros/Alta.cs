@@ -20,14 +20,13 @@ namespace GestionSeguros
 
         private void Alta_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'gestionDataSet.municipios' Puede moverla o quitarla según sea necesario.
-            this.municipiosTableAdapter.Fill(this.gestionDataSet.municipios);
-            // TODO: esta línea de código carga datos en la tabla 'gestionDataSet.provincias' Puede moverla o quitarla según sea necesario.
-            this.provinciasTableAdapter.Fill(this.gestionDataSet.provincias);
-            // TODO: esta línea de código carga datos en la tabla 'gestionDataSet.datos' Puede moverla o quitarla según sea necesario.
-            this.datosTableAdapter.Fill(this.gestionDataSet.datos);
+            // TODO: esta línea de código carga datos en la tabla 'agencia_segurosDataSet.municipios' Puede moverla o quitarla según sea necesario.
+            this.municipiosTableAdapter1.Fill(this.agencia_segurosDataSet.municipios);
+            // TODO: esta línea de código carga datos en la tabla 'agencia_segurosDataSet.provincias' Puede moverla o quitarla según sea necesario.
+            this.provinciasTableAdapter1.Fill(this.agencia_segurosDataSet.provincias);
 
-            MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=gestion;User Id=root;Password=root;");
+
+            MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=agencia_seguros;User Id=admin;Password=admin;");
 
             MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM provincias", conn);
             DataTable dt = new DataTable();
@@ -35,10 +34,9 @@ namespace GestionSeguros
             cbProv.DataSource = dt;
 
         }
-
-        private void cbPob_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbProv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=interfaces;User Id=root;Password=root;");
+            MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=agencia_seguros;User Id=admin;Password=admin;");
 
             MySqlDataAdapter da2 = new MySqlDataAdapter($"SELECT * FROM municipios where provincia = {cbProv.SelectedValue.ToString()}", conn);
             DataTable dt2 = new DataTable();

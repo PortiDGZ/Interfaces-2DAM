@@ -54,16 +54,24 @@
             this.municipiosTableAdapter = new GestionSeguros.gestionDataSetTableAdapters.municipiosTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.agencia_segurosDataSet = new GestionSeguros.agencia_segurosDataSet();
+            this.provinciasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.provinciasTableAdapter1 = new GestionSeguros.agencia_segurosDataSetTableAdapters.provinciasTableAdapter();
+            this.municipiosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.municipiosTableAdapter1 = new GestionSeguros.agencia_segurosDataSetTableAdapters.municipiosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.municipiosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipiosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbPob
             // 
-            this.cbPob.DataSource = this.municipiosBindingSource;
+            this.cbPob.DataSource = this.municipiosBindingSource1;
             this.cbPob.DisplayMember = "municipio";
             this.cbPob.FormattingEnabled = true;
             this.cbPob.Location = new System.Drawing.Point(156, 350);
@@ -71,7 +79,6 @@
             this.cbPob.Size = new System.Drawing.Size(121, 21);
             this.cbPob.TabIndex = 46;
             this.cbPob.ValueMember = "id";
-            this.cbPob.SelectedIndexChanged += new System.EventHandler(this.cbPob_SelectedIndexChanged);
             // 
             // municipiosBindingSource
             // 
@@ -95,7 +102,7 @@
             // 
             // cbProv
             // 
-            this.cbProv.DataSource = this.provinciasBindingSource;
+            this.cbProv.DataSource = this.provinciasBindingSource1;
             this.cbProv.DisplayMember = "provincia";
             this.cbProv.FormattingEnabled = true;
             this.cbProv.Location = new System.Drawing.Point(156, 306);
@@ -103,6 +110,7 @@
             this.cbProv.Size = new System.Drawing.Size(121, 21);
             this.cbProv.TabIndex = 45;
             this.cbProv.ValueMember = "id";
+            this.cbProv.SelectedIndexChanged += new System.EventHandler(this.cbProv_SelectedIndexChanged);
             // 
             // provinciasBindingSource
             // 
@@ -245,6 +253,29 @@
             this.label8.TabIndex = 48;
             this.label8.Text = "CP";
             // 
+            // agencia_segurosDataSet
+            // 
+            this.agencia_segurosDataSet.DataSetName = "agencia_segurosDataSet";
+            this.agencia_segurosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // provinciasBindingSource1
+            // 
+            this.provinciasBindingSource1.DataMember = "provincias";
+            this.provinciasBindingSource1.DataSource = this.agencia_segurosDataSet;
+            // 
+            // provinciasTableAdapter1
+            // 
+            this.provinciasTableAdapter1.ClearBeforeFill = true;
+            // 
+            // municipiosBindingSource1
+            // 
+            this.municipiosBindingSource1.DataMember = "municipios";
+            this.municipiosBindingSource1.DataSource = this.agencia_segurosDataSet;
+            // 
+            // municipiosTableAdapter1
+            // 
+            this.municipiosTableAdapter1.ClearBeforeFill = true;
+            // 
             // Alta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,6 +306,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gestionDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipiosBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,5 +341,10 @@
         private gestionDataSetTableAdapters.municipiosTableAdapter municipiosTableAdapter;
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
+        private agencia_segurosDataSet agencia_segurosDataSet;
+        private System.Windows.Forms.BindingSource provinciasBindingSource1;
+        private agencia_segurosDataSetTableAdapters.provinciasTableAdapter provinciasTableAdapter1;
+        private System.Windows.Forms.BindingSource municipiosBindingSource1;
+        private agencia_segurosDataSetTableAdapters.municipiosTableAdapter municipiosTableAdapter1;
     }
 }

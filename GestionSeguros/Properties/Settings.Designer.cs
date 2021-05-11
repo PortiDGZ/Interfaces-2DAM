@@ -32,5 +32,15 @@ namespace GestionSeguros.Properties {
                 return ((string)(this["gestionConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=admin;password=admin;database=agencia_seguros")]
+        public string agencia_segurosConnectionString {
+            get {
+                return ((string)(this["agencia_segurosConnectionString"]));
+            }
+        }
     }
 }
