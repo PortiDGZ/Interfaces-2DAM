@@ -20,18 +20,13 @@ namespace GestionSeguros
 
         private void Alta_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'agencia_segurosDataSet.municipios' Puede moverla o quitarla según sea necesario.
-            this.municipiosTableAdapter1.Fill(this.agencia_segurosDataSet.municipios);
-            // TODO: esta línea de código carga datos en la tabla 'agencia_segurosDataSet.provincias' Puede moverla o quitarla según sea necesario.
-            this.provinciasTableAdapter1.Fill(this.agencia_segurosDataSet.provincias);
-
-
             MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=agencia_seguros;User Id=admin;Password=admin;");
 
             MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM provincias", conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             cbProv.DataSource = dt;
+            cb_tipo.SelectedIndex = 0;
 
         }
         private void cbProv_SelectedIndexChanged(object sender, EventArgs e)

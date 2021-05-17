@@ -64,6 +64,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>agencia_segurosDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="agencia_segurosDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>agencia_segurosDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Alta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +122,17 @@
     </None>
     <None Include="agencia_segurosDataSet.xss">
       <DependentUpon>agencia_segurosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="agencia_segurosDataSet1.xsc">
+      <DependentUpon>agencia_segurosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="agencia_segurosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>agencia_segurosDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="agencia_segurosDataSet1.xss">
+      <DependentUpon>agencia_segurosDataSet1.xsd</DependentUpon>
     </None>
     <None Include="gestionDataSet.xsc">
       <DependentUpon>gestionDataSet.xsd</DependentUpon>

@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.datosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gestionDataSet = new GestionSeguros.gestionDataSet();
-            this.datosTableAdapter = new GestionSeguros.gestionDataSetTableAdapters.datosTableAdapter();
             this.alta_btn = new System.Windows.Forms.Button();
             this.baja_btn = new System.Windows.Forms.Button();
             this.mod_btn = new System.Windows.Forms.Button();
             this.tablaDatos = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dNIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,37 +44,16 @@
             this.provinciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agenciasegurosDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agencia_segurosDataSet = new GestionSeguros.agencia_segurosDataSet();
-            this.gestionDataSet1 = new GestionSeguros.gestionDataSet();
-            this.clienteTableAdapter = new GestionSeguros.agencia_segurosDataSetTableAdapters.clienteTableAdapter();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestionDataSet)).BeginInit();
+            this.agencia_segurosDataSet1 = new GestionSeguros.agencia_segurosDataSet1();
+            this.clienteTableAdapter = new GestionSeguros.agencia_segurosDataSet1TableAdapters.clienteTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agenciasegurosDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestionDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // datosBindingSource
-            // 
-            this.datosBindingSource.DataMember = "datos";
-            this.datosBindingSource.DataSource = this.gestionDataSet;
-            // 
-            // gestionDataSet
-            // 
-            this.gestionDataSet.DataSetName = "gestionDataSet";
-            this.gestionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // datosTableAdapter
-            // 
-            this.datosTableAdapter.ClearBeforeFill = true;
             // 
             // alta_btn
             // 
-            this.alta_btn.Location = new System.Drawing.Point(261, 62);
+            this.alta_btn.Location = new System.Drawing.Point(43, 53);
             this.alta_btn.Name = "alta_btn";
             this.alta_btn.Size = new System.Drawing.Size(75, 23);
             this.alta_btn.TabIndex = 1;
@@ -85,7 +63,7 @@
             // 
             // baja_btn
             // 
-            this.baja_btn.Location = new System.Drawing.Point(542, 62);
+            this.baja_btn.Location = new System.Drawing.Point(167, 53);
             this.baja_btn.Name = "baja_btn";
             this.baja_btn.Size = new System.Drawing.Size(75, 23);
             this.baja_btn.TabIndex = 2;
@@ -95,7 +73,7 @@
             // 
             // mod_btn
             // 
-            this.mod_btn.Location = new System.Drawing.Point(781, 62);
+            this.mod_btn.Location = new System.Drawing.Point(285, 53);
             this.mod_btn.Name = "mod_btn";
             this.mod_btn.Size = new System.Drawing.Size(75, 23);
             this.mod_btn.TabIndex = 3;
@@ -116,10 +94,27 @@
             this.provinciaDataGridViewTextBoxColumn,
             this.tipoclienteDataGridViewTextBoxColumn});
             this.tablaDatos.DataSource = this.clienteBindingSource;
-            this.tablaDatos.Location = new System.Drawing.Point(131, 114);
+            this.tablaDatos.Location = new System.Drawing.Point(29, 102);
             this.tablaDatos.Name = "tablaDatos";
             this.tablaDatos.Size = new System.Drawing.Size(847, 252);
             this.tablaDatos.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(585, 53);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(222, 20);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(512, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Búsqueda:";
             // 
             // dNIDataGridViewTextBoxColumn
             // 
@@ -172,40 +167,23 @@
             // clienteBindingSource
             // 
             this.clienteBindingSource.DataMember = "cliente";
-            this.clienteBindingSource.DataSource = this.agenciasegurosDataSetBindingSource;
+            this.clienteBindingSource.DataSource = this.agencia_segurosDataSet1;
             // 
-            // agenciasegurosDataSetBindingSource
+            // agencia_segurosDataSet1
             // 
-            this.agenciasegurosDataSetBindingSource.DataSource = this.agencia_segurosDataSet;
-            this.agenciasegurosDataSetBindingSource.Position = 0;
-            // 
-            // agencia_segurosDataSet
-            // 
-            this.agencia_segurosDataSet.DataSetName = "agencia_segurosDataSet";
-            this.agencia_segurosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gestionDataSet1
-            // 
-            this.gestionDataSet1.DataSetName = "gestionDataSet";
-            this.gestionDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.agencia_segurosDataSet1.DataSetName = "agencia_segurosDataSet1";
+            this.agencia_segurosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // clienteTableAdapter
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(191, 385);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 450);
+            this.ClientSize = new System.Drawing.Size(908, 388);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tablaDatos);
             this.Controls.Add(this.mod_btn);
@@ -214,31 +192,24 @@
             this.Name = "inicio";
             this.Text = "inicio";
             this.Load += new System.EventHandler(this.inicio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestionDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agenciasegurosDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestionDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private gestionDataSet gestionDataSet;
-        private System.Windows.Forms.BindingSource datosBindingSource;
-        private gestionDataSetTableAdapters.datosTableAdapter datosTableAdapter;
         private System.Windows.Forms.Button alta_btn;
         private System.Windows.Forms.Button baja_btn;
         private System.Windows.Forms.Button mod_btn;
         private System.Windows.Forms.DataGridView tablaDatos;
-        private gestionDataSet gestionDataSet1;
-        private System.Windows.Forms.BindingSource agenciasegurosDataSetBindingSource;
-        private agencia_segurosDataSet agencia_segurosDataSet;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private agencia_segurosDataSet1 agencia_segurosDataSet1;
         private System.Windows.Forms.BindingSource clienteBindingSource;
-        private agencia_segurosDataSetTableAdapters.clienteTableAdapter clienteTableAdapter;
+        private agencia_segurosDataSet1TableAdapters.clienteTableAdapter clienteTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dNIDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
@@ -247,6 +218,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn provinciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoclienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

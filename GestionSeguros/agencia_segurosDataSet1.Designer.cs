@@ -20,9 +20,9 @@ namespace GestionSeguros {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("agencia_segurosDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("agencia_segurosDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class agencia_segurosDataSet : global::System.Data.DataSet {
+    public partial class agencia_segurosDataSet1 : global::System.Data.DataSet {
         
         private clienteDataTable tablecliente;
         
@@ -36,7 +36,7 @@ namespace GestionSeguros {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public agencia_segurosDataSet() {
+        public agencia_segurosDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -47,7 +47,7 @@ namespace GestionSeguros {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected agencia_segurosDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected agencia_segurosDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -172,7 +172,7 @@ namespace GestionSeguros {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            agencia_segurosDataSet cln = ((agencia_segurosDataSet)(base.Clone()));
+            agencia_segurosDataSet1 cln = ((agencia_segurosDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -271,9 +271,9 @@ namespace GestionSeguros {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "agencia_segurosDataSet";
+            this.DataSetName = "agencia_segurosDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/agencia_segurosDataSet.xsd";
+            this.Namespace = "http://tempuri.org/agencia_segurosDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablecliente = new clienteDataTable();
@@ -321,7 +321,7 @@ namespace GestionSeguros {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            agencia_segurosDataSet ds = new agencia_segurosDataSet();
+            agencia_segurosDataSet1 ds = new agencia_segurosDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -680,7 +680,7 @@ namespace GestionSeguros {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                agencia_segurosDataSet ds = new agencia_segurosDataSet();
+                agencia_segurosDataSet1 ds = new agencia_segurosDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -962,7 +962,7 @@ namespace GestionSeguros {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                agencia_segurosDataSet ds = new agencia_segurosDataSet();
+                agencia_segurosDataSet1 ds = new agencia_segurosDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1229,7 +1229,7 @@ namespace GestionSeguros {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                agencia_segurosDataSet ds = new agencia_segurosDataSet();
+                agencia_segurosDataSet1 ds = new agencia_segurosDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1522,7 +1522,7 @@ namespace GestionSeguros {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                agencia_segurosDataSet ds = new agencia_segurosDataSet();
+                agencia_segurosDataSet1 ds = new agencia_segurosDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2073,7 +2073,7 @@ namespace GestionSeguros {
         }
     }
 }
-namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
+namespace GestionSeguros.agencia_segurosDataSet1TableAdapters {
     
     
     /// <summary>
@@ -2625,7 +2625,7 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(agencia_segurosDataSet.clienteDataTable dataTable) {
+        public virtual int Fill(agencia_segurosDataSet1.clienteDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2638,9 +2638,9 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual agencia_segurosDataSet.clienteDataTable GetData() {
+        public virtual agencia_segurosDataSet1.clienteDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            agencia_segurosDataSet.clienteDataTable dataTable = new agencia_segurosDataSet.clienteDataTable();
+            agencia_segurosDataSet1.clienteDataTable dataTable = new agencia_segurosDataSet1.clienteDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2648,14 +2648,14 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(agencia_segurosDataSet.clienteDataTable dataTable) {
+        public virtual int Update(agencia_segurosDataSet1.clienteDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(agencia_segurosDataSet dataSet) {
+        public virtual int Update(agencia_segurosDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "cliente");
         }
         
@@ -3150,7 +3150,7 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(agencia_segurosDataSet.municipiosDataTable dataTable) {
+        public virtual int Fill(agencia_segurosDataSet1.municipiosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3163,9 +3163,9 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual agencia_segurosDataSet.municipiosDataTable GetData() {
+        public virtual agencia_segurosDataSet1.municipiosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            agencia_segurosDataSet.municipiosDataTable dataTable = new agencia_segurosDataSet.municipiosDataTable();
+            agencia_segurosDataSet1.municipiosDataTable dataTable = new agencia_segurosDataSet1.municipiosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3173,14 +3173,14 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(agencia_segurosDataSet.municipiosDataTable dataTable) {
+        public virtual int Update(agencia_segurosDataSet1.municipiosDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(agencia_segurosDataSet dataSet) {
+        public virtual int Update(agencia_segurosDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "municipios");
         }
         
@@ -3387,7 +3387,7 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(agencia_segurosDataSet.provinciasDataTable dataTable) {
+        public virtual int Fill(agencia_segurosDataSet1.provinciasDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3400,9 +3400,9 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual agencia_segurosDataSet.provinciasDataTable GetData() {
+        public virtual agencia_segurosDataSet1.provinciasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            agencia_segurosDataSet.provinciasDataTable dataTable = new agencia_segurosDataSet.provinciasDataTable();
+            agencia_segurosDataSet1.provinciasDataTable dataTable = new agencia_segurosDataSet1.provinciasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3410,14 +3410,14 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(agencia_segurosDataSet.provinciasDataTable dataTable) {
+        public virtual int Update(agencia_segurosDataSet1.provinciasDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(agencia_segurosDataSet dataSet) {
+        public virtual int Update(agencia_segurosDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "provincias");
         }
         
@@ -3706,7 +3706,7 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(agencia_segurosDataSet.usuarioDataTable dataTable) {
+        public virtual int Fill(agencia_segurosDataSet1.usuarioDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3719,9 +3719,9 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual agencia_segurosDataSet.usuarioDataTable GetData() {
+        public virtual agencia_segurosDataSet1.usuarioDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            agencia_segurosDataSet.usuarioDataTable dataTable = new agencia_segurosDataSet.usuarioDataTable();
+            agencia_segurosDataSet1.usuarioDataTable dataTable = new agencia_segurosDataSet1.usuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3729,14 +3729,14 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(agencia_segurosDataSet.usuarioDataTable dataTable) {
+        public virtual int Update(agencia_segurosDataSet1.usuarioDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(agencia_segurosDataSet dataSet) {
+        public virtual int Update(agencia_segurosDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "usuario");
         }
         
@@ -4029,7 +4029,7 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(agencia_segurosDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(agencia_segurosDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._clienteTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.cliente.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -4075,7 +4075,7 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(agencia_segurosDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(agencia_segurosDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._clienteTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.cliente.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -4117,7 +4117,7 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(agencia_segurosDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(agencia_segurosDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._usuarioTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.usuario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -4183,7 +4183,7 @@ namespace GestionSeguros.agencia_segurosDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(agencia_segurosDataSet dataSet) {
+        public virtual int UpdateAll(agencia_segurosDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
