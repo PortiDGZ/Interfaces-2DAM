@@ -35,14 +35,14 @@ namespace GestionSeguros
                 }
                 else
                 {
-                    label4.Text = "La contraseña es incorrecta";
-                    label4.Show();
+                    error_pass.Text = "La contraseña es incorrecta";
+                    error_pass.Show();
                 }
             }
             else
             {
-                label3.Text = "El usuario es incorrecto";
-                label3.Show();
+                error_usu.Text = "El usuario es incorrecto";
+                error_usu.Show();
             }
 
             
@@ -61,8 +61,8 @@ namespace GestionSeguros
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            label3.Hide();
-            label4.Hide();
+            error_usu.Hide();
+            error_pass.Hide();
         }
     }
 }
