@@ -69,12 +69,6 @@ namespace GestionSeguros
                 string CP = Alta.cp_txt.Text;
                 string query = $"INSERT INTO cliente (DNI, Nombre, Apellidos, Telefono, Provincia, Localidad, CP, Tipo_cliente) VALUES('{dni}', '{nombre}', '{apellidos}', '{telefono}', '{provincia}', '{poblacion}', '{CP}', '{tipo_cliente}')";
                 MySqlConnection conn = new MySqlConnection(path);
-                
-
-
-
-               
-
 
                 if (conn.State == ConnectionState.Closed)
                 {
@@ -82,15 +76,11 @@ namespace GestionSeguros
                     conn.Open();
                 }
 
-
             //Creamos la conexión 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 //Ejecutamos la query
                 cmd.ExecuteNonQuery();
-
-
-
 
                 //Cerramos la conexión al terminar el foreach
                 conn.Close();
@@ -120,11 +110,6 @@ namespace GestionSeguros
             Busqueda(textBox1.Text);
         }
 
-        private void clienteBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void refreshdata()
         {
 
@@ -137,5 +122,16 @@ namespace GestionSeguros
             con.Close();
             tablaDatos.DataSource = dt;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("¿Quieres salir de la aplicación?", "Confirmación", buttons);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
+    }
     }

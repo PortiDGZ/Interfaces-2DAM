@@ -46,6 +46,7 @@
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agencia_segurosDataSet1 = new GestionSeguros.agencia_segurosDataSet1();
             this.clienteTableAdapter = new GestionSeguros.agencia_segurosDataSet1TableAdapters.clienteTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet1)).BeginInit();
@@ -178,11 +179,22 @@
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(396, 51);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(908, 388);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tablaDatos);
@@ -218,5 +230,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn provinciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoclienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }
