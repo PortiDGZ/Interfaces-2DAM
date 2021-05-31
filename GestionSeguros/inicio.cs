@@ -8,6 +8,7 @@ namespace GestionSeguros
     public partial class inicio : Form
     {
         Alta Alta = new Alta();
+        poliza poliza = new poliza();
         public inicio()
         {
             InitializeComponent();
@@ -132,6 +133,12 @@ namespace GestionSeguros
             {
                 Application.Exit();
             }
+        }
+
+        private void tablaDatos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            poliza.ShowDialog();
+
         }
     }
     }
