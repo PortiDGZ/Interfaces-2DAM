@@ -9,6 +9,7 @@ namespace GestionSeguros
     {
         Alta Alta = new Alta();
         poliza poliza = new poliza();
+        public static DataGridViewRow SelectedRow { get; set; }
         public inicio()
         {
             InitializeComponent();
@@ -16,8 +17,9 @@ namespace GestionSeguros
 
         private void inicio_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'agencia_segurosDataSet1.cliente' Puede moverla o quitarla según sea necesario.
-            this.clienteTableAdapter.Fill(this.agencia_segurosDataSet1.cliente);
+            // TODO: esta línea de código carga datos en la tabla 'agencia_segurosDataSet3.cliente' Puede moverla o quitarla según sea necesario.
+            this.clienteTableAdapter2.Fill(this.agencia_segurosDataSet3.cliente);
+
 
 
 
@@ -137,8 +139,14 @@ namespace GestionSeguros
 
         private void tablaDatos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            poliza.ShowDialog();
 
+            if (e.RowIndex >= 0)
+            {
+                //Set the Selected Row in Property.
+                SelectedRow = tablaDatos.Rows[e.RowIndex];
+                poliza.ShowDialog();
+
+            }
         }
     }
-    }
+}

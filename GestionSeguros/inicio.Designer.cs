@@ -41,15 +41,15 @@
             this.cPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.provinciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agencia_segurosDataSet1 = new GestionSeguros.agencia_segurosDataSet1();
+            this.clienteBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.agencia_segurosDataSet3 = new GestionSeguros.agencia_segurosDataSet3();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.clienteTableAdapter = new GestionSeguros.agencia_segurosDataSet1TableAdapters.clienteTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
+            this.clienteTableAdapter2 = new GestionSeguros.agencia_segurosDataSet3TableAdapters.clienteTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // alta_btn
@@ -94,10 +94,12 @@
             this.cPDataGridViewTextBoxColumn,
             this.provinciaDataGridViewTextBoxColumn,
             this.tipoclienteDataGridViewTextBoxColumn});
-            this.tablaDatos.DataSource = this.clienteBindingSource;
+            this.tablaDatos.DataSource = this.clienteBindingSource3;
             this.tablaDatos.Location = new System.Drawing.Point(29, 102);
             this.tablaDatos.Name = "tablaDatos";
-            this.tablaDatos.Size = new System.Drawing.Size(847, 252);
+            this.tablaDatos.ReadOnly = true;
+            this.tablaDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tablaDatos.Size = new System.Drawing.Size(851, 252);
             this.tablaDatos.TabIndex = 4;
             this.tablaDatos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDatos_CellContentDoubleClick);
             // 
@@ -106,58 +108,66 @@
             this.dNIDataGridViewTextBoxColumn.DataPropertyName = "DNI";
             this.dNIDataGridViewTextBoxColumn.HeaderText = "DNI";
             this.dNIDataGridViewTextBoxColumn.Name = "dNIDataGridViewTextBoxColumn";
+            this.dNIDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
             this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // apellidosDataGridViewTextBoxColumn
             // 
             this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
             this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
             this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
+            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telefonoDataGridViewTextBoxColumn
             // 
             this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
             this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
             this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // localidadDataGridViewTextBoxColumn
             // 
             this.localidadDataGridViewTextBoxColumn.DataPropertyName = "Localidad";
             this.localidadDataGridViewTextBoxColumn.HeaderText = "Localidad";
             this.localidadDataGridViewTextBoxColumn.Name = "localidadDataGridViewTextBoxColumn";
+            this.localidadDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cPDataGridViewTextBoxColumn
             // 
             this.cPDataGridViewTextBoxColumn.DataPropertyName = "CP";
             this.cPDataGridViewTextBoxColumn.HeaderText = "CP";
             this.cPDataGridViewTextBoxColumn.Name = "cPDataGridViewTextBoxColumn";
+            this.cPDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // provinciaDataGridViewTextBoxColumn
             // 
             this.provinciaDataGridViewTextBoxColumn.DataPropertyName = "Provincia";
             this.provinciaDataGridViewTextBoxColumn.HeaderText = "Provincia";
             this.provinciaDataGridViewTextBoxColumn.Name = "provinciaDataGridViewTextBoxColumn";
+            this.provinciaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tipoclienteDataGridViewTextBoxColumn
             // 
             this.tipoclienteDataGridViewTextBoxColumn.DataPropertyName = "Tipo_cliente";
             this.tipoclienteDataGridViewTextBoxColumn.HeaderText = "Tipo de cliente";
             this.tipoclienteDataGridViewTextBoxColumn.Name = "tipoclienteDataGridViewTextBoxColumn";
+            this.tipoclienteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // clienteBindingSource
+            // clienteBindingSource3
             // 
-            this.clienteBindingSource.DataMember = "cliente";
-            this.clienteBindingSource.DataSource = this.agencia_segurosDataSet1;
+            this.clienteBindingSource3.DataMember = "cliente";
+            this.clienteBindingSource3.DataSource = this.agencia_segurosDataSet3;
             // 
-            // agencia_segurosDataSet1
+            // agencia_segurosDataSet3
             // 
-            this.agencia_segurosDataSet1.DataSetName = "agencia_segurosDataSet1";
-            this.agencia_segurosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.agencia_segurosDataSet3.DataSetName = "agencia_segurosDataSet3";
+            this.agencia_segurosDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox1
             // 
@@ -176,10 +186,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Búsqueda:";
             // 
-            // clienteTableAdapter
-            // 
-            this.clienteTableAdapter.ClearBeforeFill = true;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(403, 53);
@@ -189,6 +195,10 @@
             this.button1.Text = "Salir";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // clienteTableAdapter2
+            // 
+            this.clienteTableAdapter2.ClearBeforeFill = true;
             // 
             // inicio
             // 
@@ -206,8 +216,8 @@
             this.Text = "inicio";
             this.Load += new System.EventHandler(this.inicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,12 +227,8 @@
         private System.Windows.Forms.Button alta_btn;
         private System.Windows.Forms.Button baja_btn;
         private System.Windows.Forms.Button mod_btn;
-        private System.Windows.Forms.DataGridView tablaDatos;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private agencia_segurosDataSet1 agencia_segurosDataSet1;
-        private System.Windows.Forms.BindingSource clienteBindingSource;
-        private agencia_segurosDataSet1TableAdapters.clienteTableAdapter clienteTableAdapter;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dNIDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
@@ -232,5 +238,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn provinciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoclienteDataGridViewTextBoxColumn;
+        public System.Windows.Forms.DataGridView tablaDatos;
+        private agencia_segurosDataSet3 agencia_segurosDataSet3;
+        private System.Windows.Forms.BindingSource clienteBindingSource3;
+        private agencia_segurosDataSet3TableAdapters.clienteTableAdapter clienteTableAdapter2;
     }
 }

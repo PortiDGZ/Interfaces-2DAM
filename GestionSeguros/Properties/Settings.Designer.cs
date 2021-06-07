@@ -42,5 +42,27 @@ namespace GestionSeguros.Properties {
                 return ((string)(this["agencia_segurosConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;persistsecurityinfo=True;password=root;database=age" +
+            "ncia_seguros")]
+        public string agencia_segurosConnectionString1 {
+            get {
+                return ((string)(this["agencia_segurosConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=root;persistsecurityinfo=True;database=age" +
+            "ncia_seguros")]
+        public string agencia_segurosConnectionString2 {
+            get {
+                return ((string)(this["agencia_segurosConnectionString2"]));
+            }
+        }
     }
 }

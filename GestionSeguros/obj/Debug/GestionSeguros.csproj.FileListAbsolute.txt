@@ -94,3 +94,4 @@ C:\Users\manana\Dropbox\Mi PC (A10-M-PCxx)\Documents\GitHub\Interfaces-2DAM\Gest
 C:\Users\manana\Dropbox\Mi PC (A10-M-PCxx)\Documents\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.csproj.CopyComplete
 C:\Users\manana\Dropbox\Mi PC (A10-M-PCxx)\Documents\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.exe
 C:\Users\manana\Dropbox\Mi PC (A10-M-PCxx)\Documents\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.pdb
+C:\Users\manana\Dropbox\Mi PC (A10-M-PCxx)\Documents\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.poliza.resources
