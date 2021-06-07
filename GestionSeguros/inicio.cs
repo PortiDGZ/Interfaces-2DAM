@@ -17,11 +17,13 @@ namespace GestionSeguros
 
         private void inicio_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'agencia_segurosDataSet3.cliente' Puede moverla o quitarla según sea necesario.
-            this.clienteTableAdapter2.Fill(this.agencia_segurosDataSet3.cliente);
-
-
-
+            var select = $"SELECT DNI, Nombre, Apellidos, Telefono, municipios.localidad, CP, provincias.provincia, Tipo_cliente, ID_cliente FROM cliente c, municipios m, provincias p where  ";
+            var c = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=agencia_seguros"); // Your Connection String here
+            var dataAdapter = new MySqlDataAdapter(select, c);
+            var commandBuilder = new MySqlCommandBuilder(dataAdapter);
+            var ds = new DataSet();
+            dataAdapter.Fill(ds);
+            tablaDatos.DataSource = ds.Tables[0];
 
         }
 
