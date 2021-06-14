@@ -17,13 +17,6 @@ namespace GestionSeguros
 
         private void inicio_Load(object sender, EventArgs e)
         {
-            var select = $"SELECT DNI, Nombre, Apellidos, Telefono, municipios.localidad, CP, provincias.provincia, Tipo_cliente, ID_cliente FROM cliente c, municipios m, provincias p where  ";
-            var c = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=agencia_seguros"); // Your Connection String here
-            var dataAdapter = new MySqlDataAdapter(select, c);
-            var commandBuilder = new MySqlCommandBuilder(dataAdapter);
-            var ds = new DataSet();
-            dataAdapter.Fill(ds);
-            tablaDatos.DataSource = ds.Tables[0];
 
         }
 
@@ -101,7 +94,7 @@ namespace GestionSeguros
         public void Busqueda(string buscar)
         {
 
-            MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=agencia_seguros;User Id=admin;Password=admin;");
+            MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=agencia_seguros;User Id=root;Password=admin;");
             conn.Open();
             MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM cliente where Nombre like '%" + buscar + "%' OR DNI like '%" + buscar + "%' OR Apellidos like '%" + buscar + "%' OR Telefono like '%" + buscar + "%' OR Localidad like '%" + buscar + "%' OR CP like '%" + buscar + "%' OR Provincia like '%" + buscar + "%' OR Tipo_cliente like '%" + buscar + "%'", conn);
             DataTable dt = new DataTable();

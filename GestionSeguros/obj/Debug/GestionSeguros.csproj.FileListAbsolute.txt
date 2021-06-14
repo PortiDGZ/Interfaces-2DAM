@@ -34,7 +34,6 @@ D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\bin\Debug\K4os.Hash.xxHash.d
 D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\bin\Debug\System.Buffers.dll
 D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\bin\Debug\MySql.Data.xml
-D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.csprojAssemblyReference.cache
 D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.exe.config
 D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.Alta.resources
 D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.Form1.resources
@@ -45,9 +44,6 @@ D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.csp
 D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.csproj.CopyComplete
 D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.exe
 D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.pdb
-D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\bin\Debug\K4os.Compression.LZ4.Streams.dll
-D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\bin\Debug\Ubiety.Dns.Core.dll
-D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\bin\Debug\Zstandard.Net.dll
 C:\Users\manana\Dropbox\Mi PC (A10-M-PCxx)\Downloads\Interfaces-2DAM-main(1)\Interfaces-2DAM-main\GestionSeguros\bin\Debug\GestionSeguros.exe.config
 C:\Users\manana\Dropbox\Mi PC (A10-M-PCxx)\Downloads\Interfaces-2DAM-main(1)\Interfaces-2DAM-main\GestionSeguros\bin\Debug\GestionSeguros.exe
 C:\Users\manana\Dropbox\Mi PC (A10-M-PCxx)\Downloads\Interfaces-2DAM-main(1)\Interfaces-2DAM-main\GestionSeguros\bin\Debug\GestionSeguros.pdb
@@ -95,3 +91,8 @@ C:\Users\manana\Dropbox\Mi PC (A10-M-PCxx)\Documents\GitHub\Interfaces-2DAM\Gest
 C:\Users\manana\Dropbox\Mi PC (A10-M-PCxx)\Documents\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.exe
 C:\Users\manana\Dropbox\Mi PC (A10-M-PCxx)\Documents\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.pdb
 C:\Users\manana\Dropbox\Mi PC (A10-M-PCxx)\Documents\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.poliza.resources
+D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.csproj.AssemblyReference.cache
+D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\obj\Debug\GestionSeguros.poliza.resources
+D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\bin\Debug\Ubiety.Dns.Core.dll
+D:\Documentos\GitHub\Interfaces-2DAM\GestionSeguros\bin\Debug\Zstandard.Net.dll

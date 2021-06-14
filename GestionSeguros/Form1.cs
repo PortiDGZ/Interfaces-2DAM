@@ -14,7 +14,7 @@ namespace GestionSeguros
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Server=localhost,3307;Database=agencia_seguros;User Id=root;Password=root;");
+            MySqlConnection conn = new MySqlConnection("Server=localhost,3307;Database=agencia_seguros;User Id=root;Password=admin;");
             string user = textBox1.Text.ToString();
             string password = textBox2.Text.ToString();
 
