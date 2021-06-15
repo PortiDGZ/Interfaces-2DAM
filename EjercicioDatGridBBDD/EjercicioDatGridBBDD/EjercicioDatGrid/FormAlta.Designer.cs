@@ -46,13 +46,11 @@
             this.cmbPoblaciones = new System.Windows.Forms.ComboBox();
             this.cmb_tipo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.agencia_segurosDataSet = new EjercicioDatGrid.agencia_segurosDataSet();
+            this.agencia_segurosDataSet1 = new EjercicioDatGrid.agencia_segurosDataSet1();
             this.provinciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.provinciasTableAdapter = new EjercicioDatGrid.agencia_segurosDataSetTableAdapters.provinciasTableAdapter();
-            this.provinciasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet)).BeginInit();
+            this.provinciasTableAdapter = new EjercicioDatGrid.agencia_segurosDataSet1TableAdapters.provinciasTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -167,7 +165,6 @@
             // 
             // cmbProvincias
             // 
-            this.cmbProvincias.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.provinciasBindingSource1, "id", true));
             this.cmbProvincias.DataSource = this.provinciasBindingSource;
             this.cmbProvincias.DisplayMember = "provincia";
             this.cmbProvincias.FormattingEnabled = true;
@@ -207,24 +204,19 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Tipo";
             // 
-            // agencia_segurosDataSet
+            // agencia_segurosDataSet1
             // 
-            this.agencia_segurosDataSet.DataSetName = "agencia_segurosDataSet";
-            this.agencia_segurosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.agencia_segurosDataSet1.DataSetName = "agencia_segurosDataSet1";
+            this.agencia_segurosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // provinciasBindingSource
             // 
             this.provinciasBindingSource.DataMember = "provincias";
-            this.provinciasBindingSource.DataSource = this.agencia_segurosDataSet;
+            this.provinciasBindingSource.DataSource = this.agencia_segurosDataSet1;
             // 
             // provinciasTableAdapter
             // 
             this.provinciasTableAdapter.ClearBeforeFill = true;
-            // 
-            // provinciasBindingSource1
-            // 
-            this.provinciasBindingSource1.DataMember = "provincias";
-            this.provinciasBindingSource1.DataSource = this.agencia_segurosDataSet;
             // 
             // FormAlta
             // 
@@ -251,9 +243,8 @@
             this.Name = "FormAlta";
             this.Text = "Alta/Modificar";
             this.Load += new System.EventHandler(this.FormAlta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,9 +269,8 @@
         private System.Windows.Forms.ComboBox cmbPoblaciones;
         private System.Windows.Forms.ComboBox cmb_tipo;
         private System.Windows.Forms.Label label7;
-        private agencia_segurosDataSet agencia_segurosDataSet;
+        private agencia_segurosDataSet1 agencia_segurosDataSet1;
         private System.Windows.Forms.BindingSource provinciasBindingSource;
-        private agencia_segurosDataSetTableAdapters.provinciasTableAdapter provinciasTableAdapter;
-        private System.Windows.Forms.BindingSource provinciasBindingSource1;
+        private agencia_segurosDataSet1TableAdapters.provinciasTableAdapter provinciasTableAdapter;
     }
 }

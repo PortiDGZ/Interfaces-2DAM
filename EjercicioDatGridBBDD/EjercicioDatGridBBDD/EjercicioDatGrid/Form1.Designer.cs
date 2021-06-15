@@ -35,9 +35,9 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.agencia_segurosDataSet = new EjercicioDatGrid.agencia_segurosDataSet();
+            this.agencia_segurosDataSet1 = new EjercicioDatGrid.agencia_segurosDataSet1();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clienteTableAdapter = new EjercicioDatGrid.agencia_segurosDataSetTableAdapters.clienteTableAdapter();
+            this.clienteTableAdapter = new EjercicioDatGrid.agencia_segurosDataSet1TableAdapters.clienteTableAdapter();
             this.dNIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,8 +46,9 @@
             this.cPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.provinciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,8 @@
             this.localidadDataGridViewTextBoxColumn,
             this.cPDataGridViewTextBoxColumn,
             this.provinciaDataGridViewTextBoxColumn,
-            this.tipoclienteDataGridViewTextBoxColumn});
+            this.tipoclienteDataGridViewTextBoxColumn,
+            this.iDClienteDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.clienteBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(38, 105);
             this.dataGridView1.Name = "dataGridView1";
@@ -122,15 +124,15 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Buscar:";
             // 
-            // agencia_segurosDataSet
+            // agencia_segurosDataSet1
             // 
-            this.agencia_segurosDataSet.DataSetName = "agencia_segurosDataSet";
-            this.agencia_segurosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.agencia_segurosDataSet1.DataSetName = "agencia_segurosDataSet1";
+            this.agencia_segurosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // clienteBindingSource
             // 
             this.clienteBindingSource.DataMember = "cliente";
-            this.clienteBindingSource.DataSource = this.agencia_segurosDataSet;
+            this.clienteBindingSource.DataSource = this.agencia_segurosDataSet1;
             // 
             // clienteTableAdapter
             // 
@@ -184,6 +186,12 @@
             this.tipoclienteDataGridViewTextBoxColumn.HeaderText = "Tipo_cliente";
             this.tipoclienteDataGridViewTextBoxColumn.Name = "tipoclienteDataGridViewTextBoxColumn";
             // 
+            // iDClienteDataGridViewTextBoxColumn
+            // 
+            this.iDClienteDataGridViewTextBoxColumn.DataPropertyName = "ID_Cliente";
+            this.iDClienteDataGridViewTextBoxColumn.HeaderText = "ID_Cliente";
+            this.iDClienteDataGridViewTextBoxColumn.Name = "iDClienteDataGridViewTextBoxColumn";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,7 +207,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencia_segurosDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -214,9 +222,9 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private agencia_segurosDataSet agencia_segurosDataSet;
+        private agencia_segurosDataSet1 agencia_segurosDataSet1;
         private System.Windows.Forms.BindingSource clienteBindingSource;
-        private agencia_segurosDataSetTableAdapters.clienteTableAdapter clienteTableAdapter;
+        private agencia_segurosDataSet1TableAdapters.clienteTableAdapter clienteTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dNIDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
@@ -225,6 +233,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn provinciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoclienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDClienteDataGridViewTextBoxColumn;
     }
 }
 

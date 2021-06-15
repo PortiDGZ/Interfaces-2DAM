@@ -134,11 +134,13 @@ namespace EjercicioDatGrid
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'agencia_segurosDataSet1.cliente' Puede moverla o quitarla según sea necesario.
+            this.clienteTableAdapter.Fill(this.agencia_segurosDataSet1.cliente);
             // TODO: esta línea de código carga datos en la tabla 'agencia_segurosDataSet.cliente' Puede moverla o quitarla según sea necesario.
-            this.clienteTableAdapter.Fill(this.agencia_segurosDataSet.cliente);
+
             //Conexión con la base de datos
             conexion = new MySqlConnection();
-            conexion.ConnectionString = "Server=localhost;Database=agencia_seguros; Uid=root;Pwd=admin;";
+            conexion.ConnectionString = "Server=localhost;Database=agencia_seguros; Uid=admin;Pwd=admin;";
 
             this.actualizarTabla();
         }
@@ -219,7 +221,7 @@ namespace EjercicioDatGrid
         public void Busqueda(string buscar)
         {
 
-            MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=agencia_seguros;User Id=root;Password=admin;");
+            MySqlConnection conn = new MySqlConnection("Server=localhost,3306;Database=agencia_seguros;User Id=admin;Password=admin;");
             conn.Open();
             MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM cliente where Nombre like '%" + buscar + "%' OR DNI like '%" + buscar + "%' OR Apellidos like '%" + buscar + "%' OR Telefono like '%" + buscar + "%' OR Localidad like '%" + buscar + "%' OR CP like '%" + buscar + "%' OR Provincia like '%" + buscar + "%' OR Tipo_cliente like '%" + buscar + "%'", conn);
             DataTable dt = new DataTable();

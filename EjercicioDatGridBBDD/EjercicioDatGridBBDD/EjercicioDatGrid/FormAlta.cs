@@ -56,12 +56,12 @@ namespace EjercicioDatGrid
         {
             //Conexión con la base de datos
             conexion = new MySqlConnection();
-            conexion.ConnectionString = "Server=localhost;Database=agencia_seguros; Uid=root;Pwd=admin;";
+            conexion.ConnectionString = "Server=localhost;Database=agencia_seguros; Uid=admin;Pwd=admin;";
         }
 
         private void llenarComboProvincias()
         {
-            this.provinciasTableAdapter.Fill(this.agencia_segurosDataSet.provincias);
+            this.provinciasTableAdapter.Fill(this.agencia_segurosDataSet1.provincias);
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -81,8 +81,9 @@ namespace EjercicioDatGrid
 
         private void FormAlta_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'agencia_segurosDataSet1.provincias' Puede moverla o quitarla según sea necesario.
+            this.provinciasTableAdapter.Fill(this.agencia_segurosDataSet1.provincias);
             // TODO: esta línea de código carga datos en la tabla 'agencia_segurosDataSet.provincias' Puede moverla o quitarla según sea necesario.
-            this.provinciasTableAdapter.Fill(this.agencia_segurosDataSet.provincias);
             establecerConexion();
             llenarComboProvincias();
 
